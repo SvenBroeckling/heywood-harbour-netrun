@@ -5,9 +5,10 @@ import { NodeIcon } from './Icons';
 
 interface NodeDetailProps {
   node: NodeData | null;
+  onCenterNode: () => void;
 }
 
-const NodeDetail: React.FC<NodeDetailProps> = ({ node }) => {
+const NodeDetail: React.FC<NodeDetailProps> = ({ node, onCenterNode }) => {
   if (!node) {
     return (
       <div className="w-full md:w-1/3 lg:w-1/4 p-4 border-l-2 border-cyan-500/30 text-cyan-400 bg-black/30 h-full overflow-y-auto">
@@ -46,6 +47,15 @@ const NodeDetail: React.FC<NodeDetailProps> = ({ node }) => {
         </div>
         <p className="text-sm opacity-80">{node.description}</p>
       </div>
+
+      <button
+        onClick={onCenterNode}
+        className="w-full mb-4 px-4 py-2 bg-cyan-700/50 border-2 border-cyan-500 text-cyan-300 font-bold uppercase tracking-widest hover:bg-cyan-600/70 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 flex items-center justify-center gap-2"
+        aria-label="Center view on selected node"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M5 12h14"/><path d="M12 5v14"/><circle cx="12" cy="12" r="3"/></svg>
+        Center Node
+      </button>
 
       <div className="flex-grow space-y-4 text-cyan-300">
         <div>

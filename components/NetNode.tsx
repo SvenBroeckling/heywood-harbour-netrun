@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { type NodeData, NodeType } from '../types';
 import { NodeIcon } from './Icons';
@@ -30,8 +29,8 @@ const NetNode: React.FC<NetNodeProps> = ({ node, onClick, isSelected, isAccessib
     <div
       className={`${baseClasses} ${revealedClass} ${selectedClass} ${accessibleClass}`}
       style={{
-        left: `${node.gridX * 10}%`,
-        top: `${node.gridY * 10}%`,
+        left: `${node.gridX * 4}%`,
+        top: `${node.gridY * 4}%`,
       }}
       onClick={() => isAccessible && onClick(node.id)}
     >
