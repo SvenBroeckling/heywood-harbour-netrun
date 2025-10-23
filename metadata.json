@@ -1,0 +1,5 @@
+{
+  "name": "Cyberpunk NET Crawl",
+  "description": "A web application simulating a Netrun crawl through a secure NET architecture, inspired by Cyberpunk Red. Players can reveal nodes, uncover secrets, and navigate a complex digital landscape.",
+  "requestFramePermissions": []
+}
